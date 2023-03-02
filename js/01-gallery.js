@@ -75,4 +75,13 @@ gallery.addEventListener('click', event => {
 `)
 
 instance.show()
-})
+
+    gallery,addEventListener('keydown', event => {
+        const ESC_KEY_CODE = 'Escape';
+        const isEscKey = event.code === ESC_KEY_CODE;
+      
+        if (isEscKey) {
+            instance.close();
+        }
+    });
+});
